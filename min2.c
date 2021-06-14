@@ -96,3 +96,21 @@ void buy(int n,int barcode){
              }
     }
 }
+//read the file
+void print(){
+
+        int k;
+   FILE *fp = fopen("inventory.txt","r");
+
+      while((k=fgetc(fp))!=EOF){
+        printf("%c",k);
+      }
+    printf("\n");
+
+       if(fp==NULL){
+        printf("this file is not opened");
+       }
+     fclose(fp);
+
+
+}
